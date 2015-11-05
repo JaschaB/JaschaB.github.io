@@ -1,3 +1,6 @@
+var rX = rotationX + 180;
+var pRX = pRotationX + 180;
+
 var img;
 function preload() { 
 	img = loadImage("boyfriend.jpg");
@@ -11,9 +14,33 @@ function draw() {
 	// place your drawing code here
 	
 	
-	background("#d3aa7a");
+	var rotateDirection = 'clockwise';
+
+
+var rX = rotationX + 180;
+var pRX = pRotationX + 180;
+
+if ((rX - pRX > 0 && rX - pRX < 270)|| rX - pRX < -270){
+  rotateDirection = 'clockwise';
+} else if (rX - pRX < 0 || rX - pRX > 270){
+  rotateDirection = 'counter-clockwise';
+}
+	
+	
+background("#d3aa7a");
 	//background("#8e9877");
 
+noFill();
+stroke("black")
+	ellipseMode(CENTER);
+	steps = 385;
+	for (i = 0; i <= steps; i++) {
+  	t = i / steps;
+  	x = curvePoint(635, 935, 973, 813, t);
+  	y = curvePoint(116, 816, 0, 151, t);
+  	ellipse(mouseX, y, 55, 65);
+	}
+	
 	stroke("black")
 	fill("black");
 	strokeWeight(1);
@@ -23,26 +50,17 @@ function draw() {
 
 
 	noFill();
-	fill(255);
+	fill (255);
 	ellipseMode(CENTER);
 	steps = 45;
 	for (i = 0; i <= steps; i++) {
   	t = i / steps;
   	x = curvePoint(75, 5, 873, 163, t);
-  	y = curvePoint(26, 136, 124, 561, t);
-  	ellipse(x, y, 55, 35);
+  	y = curvePoint(126, 136, 24, 561, t);
+  	ellipse(x,y, 55, 35);
 	}
   	
-  	noFill();
-	fill(265);
-	ellipseMode(CENTER);
-	steps = 90;
-	for (i = 0; i <= steps; i++) {
-  	t = i / steps;
-  	x = curvePoint(85, 15, 33, 93, t);
-  	y = curvePoint(46, 6, 292, 861, t)
-  	ellipse(x, y, 25, 25);
-	}
+  
 	
 	stroke("#d0b391");;
 	fill("#d0b391");
@@ -50,7 +68,7 @@ function draw() {
 	steps = 70;
 	for (i = 0; i <= steps; i++) {
   	t = i / steps;
-  	x = curvePoint(110, 875, 10, 13, t);
+  	x = curvePoint(110, 875, 150, 213, t);
   	y = curvePoint(910, 646, 40, 61, t);
   	ellipse(x, y, 85, 35);
   	
@@ -72,29 +90,9 @@ function draw() {
 	}
 	
 	
-	stroke("black");;
-	fill("#cfb08c");
-	strokeWeight(0.3);
-	ellipseMode(CENTER);
-	steps = 870;
-	for (i = 0; i <= steps; i++) {
-  	t = i / steps;
-  	x = curvePoint(10, 375, 10, 13, t);
-  	y = curvePoint(10, 14, 740, 61, t);
-  	ellipse(x, y, 5, 5);
-	}
 	
-	stroke("black");;
-	fill("#cfb08c");
-	strokeWeight(0.3);
-	ellipseMode(CENTER);
-	steps = 870;
-	for (i = 0; i <= steps; i++) {
-  	t = i / steps;
-  	x = curvePoint(10, 375, 10, 13, t);
-  	y = curvePoint(10, 14, 70, 61, t);
-  	ellipse(x, y, 5, 5);
-	}
+	
+	
 	
 	stroke("black");;
 	fill("#cfb08c");
@@ -151,7 +149,8 @@ function draw() {
 	
 
 	
-	c = color (110, 115, 110);  // Define color 'c'
+	
+	c = color (10, 15, 210);  // Define color 'c'
 	fill(c);  // Use color variable 'c' as fill color
 	strokeWeight(1);
 	line(60,30,250,900);	
@@ -173,9 +172,6 @@ function draw() {
 	strokeWeight(1);
 	line(90,80,250,900);
 	
-	stroke("#48ff48");
-	strokeWeight(1);
-	line(360,180,150,900);
 	
 	stroke("#d2d3a7")
 	fill("#d2d3a7");
@@ -206,9 +202,20 @@ function draw() {
 		fill("#c5c3c0");
 		strokeWeight(0.1);
 		rect(600,300,10,30);
+		
+		stroke("black")
+		fill("#c4ad91");
+		strokeWeight(0.1);
+		rect(550,310,10,70);
+		
+		stroke("black")
+		fill("#c5c3c0");
+		strokeWeight(0.1);
+		rect(550,310,10,30);
 	
 	
 	
+	//grünerstrich
 	stroke("#8e9877")
 	strokeWeight(10);
 	fill("#d2d3a7");
@@ -230,17 +237,39 @@ function draw() {
 	rect(70,480,100,10);
 	
 	noFill();
-	curve(5, 26, 73, 24, 773, 161, 15, 65);
+	curve(85, 96, 73, 24, 773, 161, 15, 65);
 	steps = 18;
 	for (i = 0; i <= steps; i++) {
 	t = i / steps;
   	x = curvePoint(10, 73, 773, 15, t);
-  	y = curvePoint(26, 24, 161, 65, t);
+  	y = curvePoint(96, 24, 161, 65, t);
   	tx = curveTangent(10, 73, 773, 15, t);
-  	ty = curveTangent(26, 24, 161, 65, t);
+  	ty = curveTangent(96, 24, 461, 65, t);
   	a = atan2(ty, tx);
   	a -= PI/2.0;
-	 line(x, y, cos(a)*8 + x, sin(a)*8 + y);
+	 line(x, y, cos(a)*78 + x, sin(a)*27 + y);
+	 
+
+	ellipseMode(CENTER);
+	steps = 135;
+	for (i = 0; i <= steps; i++) {
+  	t = i / steps;
+  	x = curvePoint(635, 935, 973, 813, t);
+  	y = curvePoint(116, 816, 0, 151, t);
+  	ellipse(mouseX, y, 355, 365);
+	}
+	
+
+  	
+	
+	
+
+		
+	
+
+	
+	
+ 
 }
 	
 }
