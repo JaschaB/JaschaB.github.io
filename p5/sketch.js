@@ -1,41 +1,247 @@
+var img;
+function preload() { 
+	img = loadImage("boyfriend.jpg");
+}
+
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+ createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
 	// place your drawing code here
+	
+	
+	background("#d3aa7a");
+	//background("#8e9877");
+
+	stroke("black")
+	fill("black");
+	strokeWeight(1);
+	rect(870,0,10,1000);
+	
+	//image(img, -100, 0, 1000, 2000);
+
+
+	noFill();
+	fill(255);
+	ellipseMode(CENTER);
+	steps = 45;
+	for (i = 0; i <= steps; i++) {
+  	t = i / steps;
+  	x = curvePoint(75, 5, 873, 163, t);
+  	y = curvePoint(26, 136, 124, 561, t);
+  	ellipse(x, y, 55, 35);
+	}
+  	
+  	noFill();
+	fill(265);
+	ellipseMode(CENTER);
+	steps = 90;
+	for (i = 0; i <= steps; i++) {
+  	t = i / steps;
+  	x = curvePoint(85, 15, 33, 93, t);
+  	y = curvePoint(46, 6, 292, 861, t)
+  	ellipse(x, y, 25, 25);
+	}
+	
+	stroke("#d0b391");;
+	fill("#d0b391");
+	ellipseMode(CENTER);
+	steps = 70;
+	for (i = 0; i <= steps; i++) {
+  	t = i / steps;
+  	x = curvePoint(110, 875, 10, 13, t);
+  	y = curvePoint(910, 646, 40, 61, t);
+  	ellipse(x, y, 85, 35);
+  	
+  	
+	}
+	
 	stroke("black");
-	fill("red"); //(255,0,0) oder ("red") oder ("#3affdc") geht auch als Farbangabe
+	fill("#cfb08c");
+	strokeWeight(0.3);
+	ellipseMode(CENTER);
+	steps = 870;
+	for (i = 0; i <= steps; i++) {
+  	t = i / steps;
+  	x = curvePoint(110, 375, 10, 13, t);
+  	y = curvePoint(10, 46, 740, 61, t);
+  	ellipse(x, y, 5, 5);
+  	
+  	
+	}
+	
+	
+	stroke("black");;
+	fill("#cfb08c");
+	strokeWeight(0.3);
+	ellipseMode(CENTER);
+	steps = 870;
+	for (i = 0; i <= steps; i++) {
+  	t = i / steps;
+  	x = curvePoint(10, 375, 10, 13, t);
+  	y = curvePoint(10, 14, 740, 61, t);
+  	ellipse(x, y, 5, 5);
+	}
+	
+	stroke("black");;
+	fill("#cfb08c");
+	strokeWeight(0.3);
+	ellipseMode(CENTER);
+	steps = 870;
+	for (i = 0; i <= steps; i++) {
+  	t = i / steps;
+  	x = curvePoint(10, 375, 10, 13, t);
+  	y = curvePoint(10, 14, 70, 61, t);
+  	ellipse(x, y, 5, 5);
+	}
+	
+	stroke("black");;
+	fill("#cfb08c");
+	strokeWeight(0.3);
+	ellipseMode(CENTER);
+	steps = 870;
+	for (i = 0; i <= steps; i++) {
+  	t = i / steps;
+  	x = curvePoint(10, 375, 10, 13, t);
+  	y = curvePoint(10, 14, 40, 61, t);
+  	ellipse(x, y, 5, 5);
+	}
+	
+	stroke("black");;
+	fill("#cfb08c");
+	strokeWeight(0.3);
+	ellipseMode(CENTER);
+	steps = 870;
+	for (i = 0; i <= steps; i++) {
+  	t = i / steps;
+  	x = curvePoint(10, 375, 10, 13, t);
+  	y = curvePoint(10, 14, 40, 61, t);
+  	ellipse(x, y, 5, 5);
+	}
+	
+	stroke("black");;
+	fill("#cfb08c");
+	strokeWeight(0.3);
+	ellipseMode(CENTER);
+	steps = 870;
+	for (i = 0; i <= steps; i++) {
+  	t = i / steps;
+  	x = curvePoint(10, 335, 10, 13, t);
+  	y = curvePoint(10, 324, 40, 61, t);
+  	rect(x, y, 5, 5);
+	}
+	
+	
+	stroke("black");
+	strokeWeight(1);
+	line(460,200,475,100);
+	
+	stroke("black");
+	strokeWeight(1);
+	line(500,80,550,5);
+	
+	stroke("black");
+	strokeWeight(1);
+	line(470,90,410,250);
+	
+	stroke("black");
+	strokeWeight(1);
+	line(490,120,520,200);
+	
+
+	
+	c = color (110, 115, 110);  // Define color 'c'
+	fill(c);  // Use color variable 'c' as fill color
+	strokeWeight(1);
+	line(60,30,250,900);	
+	strokeWeight(1);
+	rect(65, 20, 135, 60);  // Draw left rectangle
+
+	greenValue = green(c);  // Get green in 'c'
+	println(greenValue);  // Print "75.0"
+	fill(0, greenValue, 0);  // Use 'greenValue' in new fill
+	rect(50, 20, 35, 60);  // Draw right rectangle
+	
+	stroke("black");
+	fill("#d9b89f"); //(255,0,0) oder ("red") oder ("#3affdc") geht auch als Farbangabe
 	//noFill();
-	//noStroke();
-	ellipse(width/2,height/2,50,100);
+	noStroke();
+	ellipse(width/8,height/3,380,100);
 	
-	stroke("black")
+	stroke("black");
+	strokeWeight(1);
+	line(90,80,250,900);
+	
+	stroke("#48ff48");
+	strokeWeight(1);
+	line(360,180,150,900);
+	
+	stroke("#d2d3a7")
+	fill("#d2d3a7");
 	strokeWeight(10);
-	rect(10,100,100,200);
+	rect(530,120,80,20);
 	
-	stroke("black")
+		stroke("#d0b391")
+		fill("#d3d3bd");
+		strokeWeight(5);
+		rect(530,120,80,5);
+	
+		stroke("black")
+		fill("#c4ad91");
+		strokeWeight(0.1);
+		rect(630,320,50,70);
+		
+		stroke("black")
+		fill("#c5c3c0");
+		strokeWeight(0.1);
+		rect(630,300,50,30);
+		
+		stroke("black")
+		fill("#c4ad91");
+		strokeWeight(0.1);
+		rect(600,320,10,70);
+		
+		stroke("black")
+		fill("#c5c3c0");
+		strokeWeight(0.1);
+		rect(600,300,10,30);
+	
+	
+	
+	stroke("#8e9877")
 	strokeWeight(10);
-	triangle(80,50,120,20,100,80); //Nummern beziehen sich im Uhrzeigersinn auf die Eckpunkte
-	
-	stroke("grey")
-	line(10,5,40,200); //Anfangs und Endpunkt Koordinaten
+	fill("#d2d3a7");
+	line(0,10,250,900); //Anfangs und Endpunkt Koordinaten
+
+    stroke("black")
+	strokeWeight(1);
+	fill("#d2d3a7");
+	line(400,270,250,900);
 	
 	stroke("black")
-	point(200,200);
+	strokeWeight(1);
+	fill("#d2d3a7");
+	line(500,770,580,590);
 	
-	fill("violet")
-	quad(10,10,108,100,56,150,20,150);
+	stroke("black")
+	fill("black");
+	strokeWeight(1);
+	rect(70,480,100,10);
 	
 	noFill();
-    stroke(255, 102, 0);
-    curve(5, 26, 5, 26, 73, 24, 73, 61);
-    stroke(0);
-    curve(5, 26, 73, 24, 73, 61, 15, 65);
-    stroke(255, 102, 0);
-    curve(73, 24, 73, 61, 15, 65, 15, 65);
+	curve(5, 26, 73, 24, 773, 161, 15, 65);
+	steps = 18;
+	for (i = 0; i <= steps; i++) {
+	t = i / steps;
+  	x = curvePoint(10, 73, 773, 15, t);
+  	y = curvePoint(26, 24, 161, 65, t);
+  	tx = curveTangent(10, 73, 773, 15, t);
+  	ty = curveTangent(26, 24, 161, 65, t);
+  	a = atan2(ty, tx);
+  	a -= PI/2.0;
+	 line(x, y, cos(a)*8 + x, sin(a)*8 + y);
+}
 	
-	
-    
 }
 
