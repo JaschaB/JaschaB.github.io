@@ -1,0 +1,36 @@
+body {
+    background-color: blue; 
+    color: white;
+    font-family:Helvetica, Arial, sans-serif; //die fonts kann ich dann benutzen
+    padding: 20px;
+    border: 10px dotted red;
+    
+}
+
+h1{
+ 
+ color: red;
+font-family:"Times New Roman" 
+font-size: 100px;
+text-align: center;
+font-style: italic;
+font-weight:normal;
+
+} 
+.special{
+    color: lime;
+
+}
+
+.maincontent{
+    background-color: yellow;
+    color:red;
+    width:100;
+    height:200;
+    overflow:hidden;
+    position:fixed;
+    bottom:20px;
+    right:100px;
+    
+    
+}

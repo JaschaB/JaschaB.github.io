@@ -1,20 +1,18 @@
-var rX = rotationX + 180;
-var pRX = pRotationX + 180;
 
-var img;
-function preload() { 
-	img = loadImage("boyfriend.jpg");
-}
+
+//var img;
+//function preload() {}
 
 function setup() {
  createCanvas(windowWidth, windowHeight);
+ frameRate (25); //(60)>60 Frames per second
 }
 
 function draw() {
 	// place your drawing code here
 	
 	
-	var rotateDirection = 'clockwise';
+var rotateDirection = 'clockwise';
 
 
 var rX = rotationX + 180;
